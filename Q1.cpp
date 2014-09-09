@@ -42,16 +42,13 @@ int main()
 		wordArray[i].cnt = 0;
 	}
 
-	//string t;
-	//getline(cin, t);
-
 	istringstream iss(stringPara);
 	string word;
 	while (iss >> word)
 	{
 		for (i = 0; i < 100; i++)
 		{
-			if (word == wordArray[i].word)
+			if (wordArray[i].word == word)
 			{
 				wordArray[i].cnt++;
 				//cout << word << " has been used " << wordArray[i].cnt << " times." << endl;
@@ -63,8 +60,10 @@ int main()
 			}
 		}
 	}
-
-
+	for (i = 0; i < 100; i++)
+	{
+		cout << wordArray[i].word << " : " << wordArray[i].cnt << endl;
+	}
 	return 0;
 }
 
