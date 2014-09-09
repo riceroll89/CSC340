@@ -1,5 +1,5 @@
 /*       Name: JongHoon Choi
-*       Date: September 6, 2014
+*       Date: September 8, 2014
 *      Class: CSC 340.01
 * Assignment: Homework 1
 */
