@@ -22,7 +22,6 @@ int main()
 	string stringPara;
 	cout << "Enter the paragraph string: ";
 	getline(cin, stringPara);
-	cin.ignore();
 	int i = 0;
 
 	char c;
