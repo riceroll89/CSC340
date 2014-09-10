@@ -1,5 +1,5 @@
 /*       Name: JongHoon Choi
-*       Date: September 8, 2014
+*       Date: September 9, 2014
 *      Class: CSC 340.01
 * Assignment: Homework 1
 */
@@ -7,6 +7,7 @@
 #include <string>
 #include <locale>
 #include <sstream>
+#include <algorithm>
 using namespace std;
 void getFreqLetter(string stringPara);
 
@@ -31,6 +32,8 @@ int main()
 		stringPara[i] = (tolower(c));
 		i++;
 	}
+	replace(stringPara.begin(), stringPara.end(), ',', ' ');
+	replace(stringPara.begin(), stringPara.end(), '.', ' ');
 
 	cout << stringPara << endl;
 	getFreqLetter(stringPara);
@@ -69,9 +72,14 @@ int main()
 			}
 		}
 	}
+	//test unique word array
 	for (i = 0; i < 100; i++)
 	{
 		cout << wordArray[i].word << " : " << wordArray[i].cnt << endl;
+		if (wordArray[i].word == "")
+		{
+			break;
+		}
 	}
 	return 0;
 }
