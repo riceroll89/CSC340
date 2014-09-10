@@ -62,8 +62,8 @@ int main()
 		{
 			for (i = 0; i < 100; i++)
 			{
-				if (wordArray[i].word == "") //if the word is not currently in the array, add to the first available
-				{							 //slot, then increment the count by 1
+				if (wordArray[i].word == "") //if the word is not currently in the array, add to the
+				{			     //first available slot, then increment the count by 1
 					wordArray[i].word = word;
 					wordArray[i].cnt++;
 					break;
@@ -110,7 +110,7 @@ void getFreqLetter(string stringPara)
 	for (i = 0; i < stringPara.length(); i++)
 	{
 		letterArray[stringPara[i]-97]++; //97 is subtracted from the ASCII lower case chars to fit into index 0-25
-	}									 //the ordered chars are then counted by occurance
+	}					 //the ordered chars are then counted by occurance
 
 	int index;
 	int count = 0;
