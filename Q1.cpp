@@ -46,17 +46,26 @@ int main()
 	string word;
 	while (iss >> word)
 	{
-		for (i = 0; i < 100; i++)
+		int i = 0;
+		while (i < 100)
 		{
-			if (wordArray[i].word == word)
+			if (word == wordArray[i].word)
 			{
 				wordArray[i].cnt++;
-				//cout << word << " has been used " << wordArray[i].cnt << " times." << endl;
+				break;
 			}
-			else
+			i++;
+		}
+		if (i == 100)
+		{
+			for (i = 0; i < 100; i++)
 			{
-				wordArray[i].word = word;
-				//cout << word << " has been added as a unique word." << endl;
+				if (wordArray[i].word == "")
+				{
+					wordArray[i].word = word;
+					wordArray[i].cnt++;
+					break;
+				}
 			}
 		}
 	}
