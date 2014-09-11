@@ -49,8 +49,9 @@ void getFreqLetter(string stringPara)
 	char letterArray[26];
 	int i;
 	for (i = 0; i < 26; i++) //initialize array
+	{
 		letterArray[i] = 0;
-
+	}
 	for (i = 0; i < stringPara.length(); i++)
 	{
 		letterArray[stringPara[i]-97]++; //97 is subtracted from the ASCII lower case chars to fit into index 0-25
