@@ -98,8 +98,8 @@ void countWordFreq(string stringPara)
 		{
 			for (i = 0; i < 100; i++)
 			{
-				if (wordArray[i].word == "") //if the word is not currently in the array, add to the first available
-				{							 //slot, then increment the count by 1
+				if (wordArray[i].word == "") //if the word is not currently in the array, add to the
+				{			     //first available slot, then increment the count by 1
 					wordArray[i].word = word;
 					wordArray[i].cnt++;
 					break;
@@ -133,4 +133,35 @@ void countWordFreq(string stringPara)
 		wordArray[index].word = ""; //removes most used word after its printed
 		count = 0; //resets the counter to select the next most used word
 	}
+<<<<<<< HEAD
 }
+=======
+}
+
+void getFreqLetter(string stringPara)
+{
+//Use 97 - 122 in ASCII for lower case alphabet
+	char letterArray[26];
+	int i;
+	for (i = 0; i < 26; i++) //initialize array
+		letterArray[i] = 0;
+
+	for (i = 0; i < stringPara.length(); i++)
+	{
+		letterArray[stringPara[i]-97]++; //97 is subtracted from the ASCII lower case chars to fit into index 0-25
+	}					 //the ordered chars are then counted by occurance
+
+	int index;
+	int count = 0;
+	int countLetter = 0;
+	for (index = 0; index < 26; index++)
+	{
+		if (letterArray[index] > count)//sort by most used letter
+		{
+			count = letterArray[index];
+			countLetter = index + 97; //the index is converted into lowercase chars
+		}
+	}
+	cout << "Most common letter, " << (char)countLetter << " is used " << count << " times." << endl;
+}
+>>>>>>> origin/master
